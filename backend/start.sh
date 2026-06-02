@@ -17,7 +17,7 @@ API_PID=$!
 # Wait a moment then start the agent
 sleep 2
 echo "🤖 Starting LiveKit Agent..."
-python agent/interviewer_agent.py dev &
+python agent/interviewer_agent.py start &
 AGENT_PID=$!
 
 echo ""
