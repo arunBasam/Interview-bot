@@ -54,12 +54,11 @@ app = FastAPI(title="PM Interview Bot API", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[FRONTEND_URL, "http://localhost:5173", "http://localhost:3000","https://interview-ezw771yux-aruns-projects-173933ec.vercel.app"],
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 # ── Models ────────────────────────────────────────────────────────────────────
 
