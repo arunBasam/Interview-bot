@@ -11,7 +11,7 @@ fi
 
 # Start FastAPI in background
 echo "📡 Starting FastAPI server on http://localhost:8000..."
-uvicorn api.main:app --reload --host 0.0.0.0 --port 8000 &
+uvicorn api.main:app --host 0.0.0.0 --port ${PORT:-8000} &
 API_PID=$!
 
 # Wait a moment then start the agent
